@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Spotify Wrapper Test</title>
 </head>
 <body>
@@ -13,7 +11,11 @@
   <script src="../dist/spotify-wrapper.umd.js"></script>
 
   <script>
-    const albums = spotifyWrapper.searchAlbums('Incubus');
+    const spotify = new SpotifyWrapper({
+      token: 'BQDmtbqa-fKV3MEjOVNgAIiOVLV_NuVVvpYVoIwjFSIjv9AWvFmlEslKHZY81XkIlUSMrF560gHcVkCP0QEbUGPCQvdeUqEGKoqm3uo2v7iDsqINzZ1Zv8wMllAyyNA-zbaWOGnrGQqMSgRW',
+    });
+
+    const albums = spotify.search.albums('Eminem');
     const albumsEl = document.getElementById('albums');
     
     albums
