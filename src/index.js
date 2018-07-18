@@ -17,7 +17,6 @@ export default class SpotifyWrapper {
   request(url) {
     const headers = {
       headers: {
-        mode: 'no-cors',
         Authorization: `'Bearer ${this.token}'`,
       },
     };

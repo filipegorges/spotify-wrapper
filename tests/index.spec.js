@@ -82,7 +82,6 @@ describe('SpotifyWrapper Library', () => {
 
       const headers = {
         headers: {
-          mode: 'no-cors',
           Authorization: `'Bearer foo'`,
         },
       };
